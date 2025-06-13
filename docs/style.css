@@ -1,10 +1,13 @@
 body{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-minimal-forest-advertising-background-picture-image_940569.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: "JetBrains Mono", monospace;
 }
 
 button{
@@ -18,6 +21,7 @@ button{
     background-color: rgba(170, 170, 170, 0.55);
     cursor: pointer;
     width: 200px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.208);
 
 }
 button:hover{
@@ -29,6 +33,7 @@ button:active{
 label{
     font-family: "JetBrains Mono", monospace;
     font-size: 1.15rem;
+
 }
 
 select{
@@ -44,23 +49,43 @@ select:focus{
     background-color: #d0ccc4;
 }
 
+input{
+    border: none;
+    font-weight: bold;
+    background-color: #d0ccc4;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.115);
+}
+
+input:focus{
+    outline: #d0ccc4;
+}
+
+input[type="text"]{
+    font-family: "JetBrains Mono", monospace;
+}
 
 #timezone-container{
     background-color: rgba(170, 170, 170, 0.55);
     padding-block: 6px;
     padding-inline: 12px;
     border-radius: 5px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.115);
 }
+
 
 #clock-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border: 2px solid;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
     text-align: center;
-    margin: 0 auto;
+    gap: 10px;
+    justify-content: flex-start;
+    padding-top: 75px;
 
 }
 #clock{
@@ -86,25 +111,61 @@ select:focus{
     margin-bottom: 15px;
     padding: 10px;
     padding-inline: 50px;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.208);
 }
 
 #Button-container{
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    gap: 100px;
+    justify-content: center;
+    gap: 300px;
+    flex-wrap: wrap;
+}
+
+
+#add-task-button, #stopwatch-button{
+    width: 200px;
+
+}
+
+
+.task-tracker{
     position: relative;
+
 }
 
+.task-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px
 
-#add-task-button{
+}
+
+#task-form{
     position: absolute;
-    left: 100px;
-
+    top: 45px;
+    left: -25px;
+    width: 100%;
+    background-color: rgba(170,170,170,0.4);
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10px;
+    margin-top: 15px;
+    backdrop-filter: blur(5px);
 }
 
-#stopwatch-button{
-    position: absolute;
-    right: 100px;
-
+.hidden{
+    display: none !important;
 }
+
+#task-form label{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+

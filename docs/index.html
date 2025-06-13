@@ -26,8 +26,27 @@
         </div>
 
         <div id="Button-container">
-            <button id="stopwatch-button">Start Stopwatch</button>
-            <button id="add-task-button">+ Add Task</button>
+            <div>
+                <button id="stopwatch-button">Start Stopwatch</button>
+            </div>
+            
+            <div class="task-tracker">
+                <div class="task-wrapper">
+                    <button id="add-task-button">+ Add Task</button>
+                    <form id="task-form" class="hidden">
+                        <Label>Start Time: 
+                            <input type="time" id="startTime">
+                        </Label>
+                        <Label>End Time: 
+                            <input type="time" id="endTime">
+                        </Label>
+                        <label>Name: 
+                            <input type="text" id="taskName">
+                        </label>
+                        <button type="button" id="taskSubmit">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     
