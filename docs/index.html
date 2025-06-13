@@ -26,10 +26,20 @@
         </div>
 
         <div id="Button-container">
-            <div>
+            <div id="stopwatch">
                 <button id="stopwatch-button">Start Stopwatch</button>
+                <div id="stopwatch-container" class="hidden">  
+                    <div>
+                        <label id="stopwatch-time">00:00:00:00</label>
+                    </div>
+                    <div id="stopwatch-button-menu">
+                        <button id="stopwatch-start">Start</button>
+                        <button id="stopwatch-stop">Stop</button>
+                        <button id="stopwatch-reset">Reset</button>
+                    </div>
+                </div>
             </div>
-            
+
             <div class="task-tracker">
                 <div class="task-wrapper">
                     <button id="add-task-button">+ Add Task</button>

@@ -112,18 +112,20 @@ input[type="text"]{
     padding: 10px;
     padding-inline: 50px;
     box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.208);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.33);
 }
 
 #Button-container{
     display: flex;
     justify-content: center;
-    gap: 300px;
+    gap: 200px;
     flex-wrap: wrap;
 }
 
 
 #add-task-button, #stopwatch-button{
     width: 200px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
 
 }
 
@@ -150,7 +152,7 @@ input[type="text"]{
     background-color: rgba(170,170,170,0.4);
     padding: 15px 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -169,3 +171,24 @@ input[type="text"]{
     width: 100%;
 }
 
+#stopwatch-container{
+    background-color: rgba(170,170,170,0.4);
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    width: 500px;
+    height: 137px;
+}
+
+#stopwatch-button-menu button{
+    width: 100px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+#stopwatch-time{
+    font-size: 3.2rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.33);
+}

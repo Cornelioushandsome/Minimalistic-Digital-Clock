@@ -5,12 +5,22 @@ const addTaskButton = document.getElementById("add-task-button");
 const taskForm = document.getElementById("task-form");
 const taskSubmitButton = document.getElementById("taskSubmit");
 const taskName = document.getElementById("taskName");
-
+//stopwatch
+const stopwatchButton = document.getElementById("stopwatch-button");
+const stopwatchTime= document.getElementById("stopwatch-time");
+const stopwatchStartButton = document.getElementById("stopwatch-start");
+const stopwatchStopButton = document.getElementById("stopwatch-stop");
+const stopwatchResetButton = document.getElementById("stopwatch-reset");
+const stopwatchContainer = document.getElementById("stopwatch-container");
 
 const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August",
      "September", "October", "November", "December"];
 
+
+stopwatchButton.addEventListener("click", () =>{
+    stopwatchContainer.classList.toggle("hidden");
+});
 
 addTaskButton.addEventListener("click", () =>{
     taskForm.classList.toggle("hidden");
@@ -64,9 +74,56 @@ function updateClock(){
     dayTime.textContent=dayString;
 }
 
+let timer = null;
+let startTime = 0;
+let elapsedTime = 0;
+let isRunning = false;
+
+stopwatchStartButton.addEventListener("click", ()=>{
+    if(!isRunning){
+        startTime=Date.now() - elapsedTime;
+        timer = setInterval(updateStopwatch, 10);
+        isRunning = true;
+    }
+});
+
+stopwatchStopButton.addEventListener("click", ()=>{
+    if(isRunning){
+        clearInterval(timer);
+        elapsedTime = Date.now()-startTime;
+        isRunning=false;
+    }
+});
+
+stopwatchResetButton.addEventListener("click", ()=>{
+    clearInterval(timer);
+    startTime = 0;
+    elapsedTime = 0;
+    isRunning = false;
+    stopwatchTime.textContent = "00:00:00:00";
+});
+function updateStopwatch(){
+    const currentTime = Date.now();
+    elapsedTime = currentTime - startTime;
+
+    let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+    let minutes = Math.floor(elapsedTime / (1000*60) %60);
+    let seconds = Math.floor(elapsedTime / 1000%60);
+    let milliseconds = Math.floor(elapsedTime % 1000/10);
+
+    hours = hours.toString().padStart(2, 0);
+    minutes = minutes.toString().padStart(2, 0);
+    seconds = seconds.toString().padStart(2, 0);
+    milliseconds = milliseconds.toString().padStart(2, 0);    
+
+    stopwatchTime.textContent= `${hours}:${minutes}:${seconds}:${milliseconds}`;
+}
+
 getTimezone();
 updateClock();
 setInterval(updateClock, 1000);
+
+
 
 
 
