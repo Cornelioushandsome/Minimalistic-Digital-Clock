@@ -17,18 +17,14 @@
     <div id = "clock-container">
         <div id="timezone-container">
             <label>Timezone: </label>
-            <select name="timezones" id="timezone-select">
-                <option value="EDT">EDT (US)</option>
-                <option value="PDT">PDT (US)</option>
-                <option value="CDT">CDT (US)</option>
-                <option value="MDT">MDT (US)</option>
-                <option value="BST">BST (UK)</option>
-            </select>
-            
+            <label id="timezone"></label>
         </div>
-        <div id="clock">
-            00:00:00
+
+        <div id="time-container">
+            <h1 id="day"></h1>
+            <h1 id="clock">00:00:00</h1>
         </div>
+
         <div id="Button-container">
             <button id="stopwatch-button">Start Stopwatch</button>
             <button id="add-task-button">+ Add Task</button>
