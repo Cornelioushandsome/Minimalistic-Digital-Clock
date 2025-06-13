@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="png" href="https://www.citypng.com/public/uploads/preview/white-clock-icon-symbol-png-7017516950329550pxgzdsjmg.png">
+    <title>Digital Clock</title>
+</head>
+<body>
+    <div id = "clock-container">
+        <div id="timezone-container">
+            <label>Timezone: </label>
+            <select name="timezones" id="timezone-select">
+                <option value="EDT">EDT (US)</option>
+                <option value="PDT">PDT (US)</option>
+                <option value="CDT">CDT (US)</option>
+                <option value="MDT">MDT (US)</option>
+                <option value="BST">BST (UK)</option>
+            </select>
+            
+        </div>
+        <div id="clock">
+            00:00:00
+        </div>
+        <div id="Button-container">
+            <button id="stopwatch-button">Start Stopwatch</button>
+            <button id="add-task-button">+ Add Task</button>
+        </div>
+    </div>
+    
+</body>
+</html>

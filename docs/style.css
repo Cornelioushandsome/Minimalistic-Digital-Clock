@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-minimal-forest-advertising-background-picture-image_940569.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+button{
+    border: none;
+    transition: 0.5s;
+    padding-inline: 10px;
+    padding-block: 8px;
+    border-radius: 5px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.2rem;
+    background-color: rgba(170, 170, 170, 0.55);
+    cursor: pointer;
+    width: 200px;
+
+}
+button:hover{
+    background-color: rgba(170, 170, 170, 0.75);
+}
+button:active{
+    background-color: rgba(170, 170, 170, 0.45)
+}
+label{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.15rem;
+}
+
+select{
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: "JetBrains Mono", monospace;
+    cursor: pointer;
+    background: none;
+}
+
+select:focus{
+    background-color: #d0ccc4;
+}
+
+
+#timezone-container{
+    background-color: rgba(170, 170, 170, 0.55);
+    padding-block: 6px;
+    padding-inline: 12px;
+    border-radius: 5px;
+}
+
+#clock-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+}
+#clock{
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 10rem;
+    font-weight: bold;
+    background-color: rgba(170, 170, 170, 0.55);
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    margin-bottom: 10px;
+    margin: 20px;
+}
+
+#Button-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 100px;
+    position: relative;
+}
+
+
+#add-task-button{
+    position: absolute;
+    left: 100px;
+
+}
+
+#stopwatch-button{
+    position: absolute;
+    right: 100px;
+
+}
