@@ -85,7 +85,7 @@ input[type="text"]{
     text-align: center;
     gap: 10px;
     justify-content: flex-start;
-    padding-top: 75px;
+    padding-top: 35px;
 
 }
 #clock{
@@ -97,7 +97,7 @@ input[type="text"]{
 }
 
 #day{
-    font-size: 100%;
+    font-size: clamp(18px, 2vw, 30px);
     margin: 0;
 
 }
